@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - FinHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6C5CE7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-wallet"></i>
+            <h2>FinHub</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h1>App Settings</h1>
+                <p>Update your password, notifications, and privacy settings.</p>
+            </div>
+        </header>
+
+        <section class="summary-cards">
+            <div class="card card-warning">
+                <div class="card-header">
+                    <h3>Password Security</h3>
+                </div>
+                <div class="card-body">
+                    <h2>Strong</h2>
+                    <p class="card-change positive"><i class="fas fa-lock"></i> Secure account protection</p>
+                </div>
+            </div>
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3>Notifications</h3>
+                </div>
+                <div class="card-body">
+                    <h2>Enabled</h2>
+                    <p class="card-change positive"><i class="fas fa-bell"></i> Alerts are active</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>App Preferences</h3>
+                </div>
+                <div class="chart-body" style="height: 220px; display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--gray-color);">
+                    Coming soon: customize notifications, security and mobile app behavior.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js" defer></script>
+    <script src="dashboard.js" defer></script>
+</body>
+</html>

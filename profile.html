@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - FinHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6C5CE7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-wallet"></i>
+            <h2>FinHub</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h1>Your Profile</h1>
+                <p>Manage your account details and preferences.</p>
+            </div>
+        </header>
+        <section class="summary-cards">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3>Account Name</h3>
+                </div>
+                <div class="card-body">
+                    <h2 id="profileName">Loading...</h2>
+                    <p class="card-change positive"><i class="fas fa-check-circle"></i> Profile is up to date</p>
+                </div>
+            </div>
+
+            <div class="card card-success">
+                <div class="card-header">
+                    <h3>Email</h3>
+                </div>
+                <div class="card-body">
+                    <h2 id="profileEmail">Loading...</h2>
+                    <p class="card-change positive"><i class="fas fa-envelope"></i> Verified</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>Profile Summary</h3>
+                </div>
+                <div class="chart-body" style="height: 220px; display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--gray-color);">
+                    Your FinHub profile is active. Use Settings to update your password or preferences.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js" defer></script>
+    <script src="dashboard.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = App.getCurrentUser();
+            if (user) {
+                document.getElementById('profileName').textContent = user.name;
+                document.getElementById('profileEmail').textContent = user.email;
+            }
+        });
+    </script>
+</body>
+</html>
